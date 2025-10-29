@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for GRIR Mail Details'
+define service ZUI_GRIR_EMAIL_DETAILS {
+  expose ZC_GRIR_Email_Details;
+}

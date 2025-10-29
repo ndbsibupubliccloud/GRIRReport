@@ -1,0 +1,15 @@
+@EndUserText.label: 'Access Control For GRIR Report on Plant'
+@MappingRole: true
+define role ZDCL_GRIR_REPORT {
+    grant
+        select
+            on
+                ZR_GRIR_REPORT
+                
+                    where
+//                        ( Plant,Vendorcode ) = aspect pfcg_auth(ZGLB,ZPLANT,ZUSER,ACTVT = '03' );
+                        ( Plant ) = aspect pfcg_auth(ZAO_PLANT,ZPLANT,ACTVT = '03' );
+//                        and ( Vendorcode ) = aspect pfcg_auth ( ZAO_USER,ZUSER,ACTVT = '03' );
+//                        and ( $session.user ) =  aspect pfcg_auth( ZAO_USER,ZUSER,ACTVT ='03' ) ;
+                        
+}

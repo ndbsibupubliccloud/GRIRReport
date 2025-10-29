@@ -1,0 +1,50 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName:'Email for GRIR',
+typeNamePlural:'Email for GRIR',
+title:{ type:#STANDARD,label:'Email for GRIR' } }
+
+annotate entity ZC_GRIR_Email_Details with
+{
+  @UI.facet:[{purpose :#STANDARD,
+              type    :#IDENTIFICATION_REFERENCE,
+              position:1,
+              label   :'Email for GRIR'}]
+              
+  @UI:{lineItem:[{position:10}],identification:[{position:10}]}
+  @EndUserText.label:'Plant'
+    @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_Plant',
+        element: 'Plant'
+    } }]
+  Plant;
+  
+  @UI:{lineItem:[{position:20}],identification:[{position:20}]}
+  @EndUserText.label:'UserName'
+  UserName;
+  
+  @UI:{lineItem:[{position:30}],identification:[{position:30}]}
+  @EndUserText.label:'UserId'
+  UserId;
+  
+  @UI:{lineItem:[{position:40}],identification:[{position:40}]}
+  @EndUserText.label:'EmailId'
+  EmailId;
+  
+  @UI:{lineItem:[{position:50}],identification:[{position:50}]}
+  @EndUserText.label:'Createdby'
+  Createdby;
+  
+  @UI:{lineItem:[{position:60}],identification:[{position:60}]}
+  @EndUserText.label:'Createdat'
+  Createdat;
+  
+  @UI:{lineItem:[{position:70}],identification:[{position:70}]}
+  @EndUserText.label:'Lastchangedby'
+  Lastchangedby;
+  
+  @UI:{lineItem:[{position:80}],identification:[{position:80}]}
+  @EndUserText.label:'Lastchangedat'
+  Lastchangedat;
+
+}

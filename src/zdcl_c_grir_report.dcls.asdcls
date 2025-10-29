@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control For GRIR Report Projection view on Plant'
+@MappingRole: true
+define role ZDCL_C_GRIR_REPORT {
+    grant
+        select
+            on
+                ZC_GRIR_REPORT
+                    where
+                       inheriting conditions from entity ZR_GRIR_REPORT;
+                        
+}
